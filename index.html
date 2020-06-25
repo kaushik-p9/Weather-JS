@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather JS</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h2 id="w-location"></h2>
+                <h3 class="text-dark" id="w-desc"></h3>
+                <h3 id="w-string"></h3>
+                <img id="w-icon" class="center">
+
+
+                <ul id="w-details" class="collection">
+                    <li class="collection-item center-align" id="w-humidity"></li>
+                    <li class="collection-item center-align" id="w-uv"></li>
+                    <li class="collection-item center-align" id="w-feels-like"></li>
+                    <li class="collection-item center-align" id="w-wind"></li>
+                </ul>
+
+                <hr>
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#locModal">Change Location</a>
+
+
+                <!-- Modal Structure -->
+                <div id="locModal" class="modal">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Choose Location</h5>
+                    </div>
+                    <div class="modal-content">
+                        <for class="" id="w-form">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" class="input-field">
+                            </div>
+                        </for>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a> -->
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="w-change-btn">Save
+                            Changes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+    </script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="storage.js"></script>
+    <script src="weather.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
